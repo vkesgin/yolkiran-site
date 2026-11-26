@@ -1,1 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><circle cx="14" cy="14" r="10" fill="#8A93A3" stroke="#171714" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28"><defs><clipPath id="en"><circle cx="14" cy="14" r="10"/></clipPath></defs>
+   <circle cx="14" cy="14" r="10" fill="#5F6776"/>
+   <circle cx="12.4" cy="12" r="10" fill="#8A93A3" clip-path="url(#en)"/>
+   <circle cx="14" cy="14" r="10" fill="none" stroke="#2A1A12" stroke-width="4.5"/></svg>

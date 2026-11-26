@@ -1,5 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><circle cx="40" cy="40" r="33" fill="#A66BD6" stroke="#171714" stroke-width="4.5" stroke-linejoin="round" stroke-linecap="round"/>
-     <circle cx="22" cy="44" r="10" fill="#fff" stroke="#171714" stroke-width="3.5"/>
-     <circle cx="44" cy="44" r="10" fill="#fff" stroke="#171714" stroke-width="3.5"/>
-     <circle cx="19.5" cy="45" r="4.2" fill="#171714"/>
-     <circle cx="41.5" cy="45" r="4.2" fill="#171714"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80"><defs><clipPath id="eh"><circle cx="40" cy="40" r="33"/></clipPath></defs>
+   <circle cx="40" cy="40" r="33" fill="#7E48AE"/>
+   <circle cx="34.72" cy="33.4" r="33" fill="#A66BD6" clip-path="url(#eh)"/>
+   <circle cx="40" cy="40" r="33" fill="none" stroke="#2A1A12" stroke-width="4.5"/><ellipse cx="26.14" cy="23.5" rx="9.24" ry="5.28" transform="rotate(-32 26.14 23.5)" fill="#fff" fill-opacity=".5"/>
+     <circle cx="22" cy="44" r="10" fill="#fff" stroke="#2A1A12" stroke-width="3.5"/>
+     <circle cx="44" cy="44" r="10" fill="#fff" stroke="#2A1A12" stroke-width="3.5"/>
+     <circle cx="19.5" cy="45" r="4.2" fill="#2A1A12"/>
+     <circle cx="41.5" cy="45" r="4.2" fill="#2A1A12"/></svg>
