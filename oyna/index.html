@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
     <meta name="theme-color" content="#698C50" />
     <title>Bonk Road</title>
-    <script type="module" crossorigin src="/yolkiran-site/oyna/assets/index-BiYYJzfY.js"></script>
-    <link rel="stylesheet" crossorigin href="/yolkiran-site/oyna/assets/index-CWythcaa.css">
+    <script type="module" crossorigin src="/yolkiran-site/oyna/assets/index-CfPchJIh.js"></script>
+    <link rel="stylesheet" crossorigin href="/yolkiran-site/oyna/assets/index-DMZNVa1q.css">
   </head>
   <body>
     <div id="frame">
@@ -58,6 +58,8 @@
               <button class="btn buy" type="submit">Adı kaydet</button>
             </form>
             <p id="nick-error" class="error" role="alert"></p>
+            <p id="week-reward" class="note" hidden></p>
+            <button id="btn-week-reward" class="btn buy iron wide" type="button" hidden></button>
           </div>
           <button id="btn-logout" class="btn wide" type="button" hidden>Çıkış yap</button>
           <button id="btn-lang" class="btn wide" type="button" data-dil="sabit"></button>
@@ -71,8 +73,8 @@
       </main>
 
       <nav id="tabs" aria-label="Bölümler">
-        <button class="tabbtn on" data-tab="grow" type="button"><img src="/yolkiran-site/oyna/assets/icon_weapon.svg" alt="" /><span>Güçlen</span></button>
-        <button class="tabbtn" data-tab="forge" type="button"><img src="/yolkiran-site/oyna/assets/hero_hammer.svg" alt="" /><span>Atölye</span></button>
+        <button class="tabbtn on" data-tab="grow" type="button"><img src="/yolkiran-site/oyna/assets/icon_weapon.svg" alt="" /><span>Güçlen</span><i id="grow-dot" hidden></i></button>
+        <button class="tabbtn" data-tab="forge" type="button"><img src="/yolkiran-site/oyna/assets/hero_hammer.svg" alt="" /><span>Atölye</span><i id="forge-dot" hidden></i></button>
         <button class="tabbtn" data-tab="skill" type="button"><img src="/yolkiran-site/oyna/assets/skill_meteor.svg" alt="" /><span>Beceri</span><i id="skill-dot" hidden></i></button>
         <button class="tabbtn" data-tab="path" type="button"><img src="/yolkiran-site/oyna/assets/icon_path.svg" alt="" /><span>Yol</span><i id="path-dot" hidden></i></button>
         <button class="tabbtn" data-tab="account" type="button"><img src="/yolkiran-site/oyna/assets/icon_account.svg" alt="" /><span>Hesap</span><i id="acc-dot" hidden></i></button>
