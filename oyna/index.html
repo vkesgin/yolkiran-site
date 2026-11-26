@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
+    <meta name="theme-color" content="#698C50" />
+    <title>Yolkıran</title>
+    <script type="module" crossorigin src="/yolkiran-site/oyna/assets/index-Bm400Rgx.js"></script>
+    <link rel="stylesheet" crossorigin href="/yolkiran-site/oyna/assets/index-BEea-iGt.css">
+  </head>
+  <body>
+    <div id="frame">
+      <header id="top">
+        <span id="chip-copper" class="chip" title="Bakır"><img src="/yolkiran-site/oyna/assets/coin.svg" alt="Bakır" /><span class="stack"><b id="hud-copper">0</b><small id="hud-rate"></small></span></span>
+        <span id="chip-iron" class="chip" title="Demir"><img src="/yolkiran-site/oyna/assets/iron.svg" alt="Demir" /><b id="hud-iron">0</b></span>
+        <span id="sync" class="sync">…</span>
+        <button id="btn-daily" class="gift" type="button" aria-label="Günlük ödüller"><img src="/yolkiran-site/oyna/assets/icon_gift.svg" alt="" /><i id="daily-dot" hidden></i></button>
+      </header>
+
+      <div id="stage"><div id="game"></div></div>
+
+      <div id="coach" hidden></div>
+      <nav id="skills" aria-label="Beceriler"></nav>
+
+      <main id="panel">
+        <section id="tab-grow" class="tab" data-tab="grow"></section>
+        <section id="tab-forge" class="tab" data-tab="forge" hidden></section>
+        <section id="tab-skill" class="tab" data-tab="skill" hidden></section>
+        <section id="tab-path" class="tab" data-tab="path" hidden></section>
+        <section id="tab-account" class="tab" data-tab="account" hidden>
+          <div class="card">
+            <b id="acc-title"></b>
+            <p id="acc-text"></p>
+          </div>
+          <div id="acc-social" class="card" hidden>
+            <button id="btn-apple" class="btn social apple wide" type="button" hidden><img src="/yolkiran-site/oyna/assets/logo_apple.svg" alt="" />Apple ile devam et</button>
+            <button id="btn-google" class="btn social google wide" type="button" hidden><img src="/yolkiran-site/oyna/assets/logo_google.svg" alt="" />Google ile devam et</button>
+            <p id="social-error" class="error" role="alert"></p>
+          </div>
+          <form id="acc-form" class="card" autocomplete="on">
+            <label>E-posta
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="username" required />
+            </label>
+            <label>Şifre
+              <input id="password" name="password" type="password" autocomplete="current-password" minlength="6" required />
+            </label>
+            <p id="acc-error" class="error" role="alert"></p>
+            <button id="btn-link" class="btn buy wide" type="submit">Hesabı bağla</button>
+            <button id="btn-login" class="btn wide" type="button">Mevcut hesabımla giriş yap</button>
+          </form>
+          <button id="btn-logout" class="btn wide" type="button" hidden>Çıkış yap</button>
+          <button id="btn-sound" class="btn wide" type="button">Ses efektleri: Açık</button>
+          <button id="btn-music" class="btn wide" type="button">Müzik: Açık</button>
+          <button id="btn-haptics" class="btn wide" type="button" hidden></button>
+          <button id="btn-notify" class="btn wide" type="button" hidden></button>
+          <a id="link-privacy" class="link" href="https://vkesgin.github.io/yolkiran-site/gizlilik.html" target="_blank" rel="noopener">Gizlilik politikası</a>
+          <button id="btn-delete" class="btn wide danger" type="button">Hesabımı ve verilerimi sil</button>
+        </section>
+      </main>
+
+      <nav id="tabs" aria-label="Bölümler">
+        <button class="tabbtn on" data-tab="grow" type="button"><img src="/yolkiran-site/oyna/assets/icon_weapon.svg" alt="" /><span>Güçlen</span></button>
+        <button class="tabbtn" data-tab="forge" type="button"><img src="/yolkiran-site/oyna/assets/hero_hammer.svg" alt="" /><span>Atölye</span></button>
+        <button class="tabbtn" data-tab="skill" type="button"><img src="/yolkiran-site/oyna/assets/skill_meteor.svg" alt="" /><span>Beceri</span></button>
+        <button class="tabbtn" data-tab="path" type="button"><img src="/yolkiran-site/oyna/assets/icon_path.svg" alt="" /><span>Yol</span><i id="path-dot" hidden></i></button>
+        <button class="tabbtn" data-tab="account" type="button"><img src="/yolkiran-site/oyna/assets/icon_account.svg" alt="" /><span>Hesap</span><i id="acc-dot" hidden></i></button>
+      </nav>
+
+      <section id="boot" class="overlay">
+        <h1>YOLKIRAN</h1>
+        <p id="boot-text">Yükleniyor…</p>
+        <button id="btn-retry" class="btn buy" type="button" hidden>Tekrar dene</button>
+      </section>
+
+      <section id="offline" class="overlay dim" hidden>
+        <div class="card pop">
+          <h2>YOKKEN KAZANDIN</h2>
+          <ul id="off-lines" class="lines"></ul>
+          <p id="off-note" class="note"></p>
+          <button id="btn-offline-ok" class="btn buy wide" type="button">Devam</button>
+        </div>
+      </section>
+
+      <section id="daily" class="overlay dim" hidden>
+        <div class="card pop">
+          <h2>GÜNLÜK</h2>
+          <p id="daily-streak" class="note"></p>
+          <div id="daily-days" class="days"></div>
+          <button id="btn-daily-claim" class="btn buy iron wide" type="button"></button>
+          <div id="daily-quests" class="quests"></div>
+          <p id="daily-reset" class="note"></p>
+          <b class="sub">HAFTALIK HEDEFLER</b>
+          <div id="weekly-quests" class="quests"></div>
+          <p id="weekly-reset" class="note"></p>
+          <button id="btn-daily-close" class="btn wide" type="button">Kapat</button>
+        </div>
+      </section>
+
+      <div id="toast" hidden></div>
+    </div>
+  </body>
+</html>
