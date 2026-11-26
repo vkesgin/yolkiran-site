@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
     <meta name="theme-color" content="#698C50" />
     <title>Bonk Road</title>
-    <script type="module" crossorigin src="/yolkiran-site/oyna/assets/index-BKcYoYkh.js"></script>
-    <link rel="stylesheet" crossorigin href="/yolkiran-site/oyna/assets/index-C7Khdu52.css">
+    <script type="module" crossorigin src="/yolkiran-site/oyna/assets/index-D62eDp1L.js"></script>
+    <link rel="stylesheet" crossorigin href="/yolkiran-site/oyna/assets/index-8ypwuAti.css">
   </head>
   <body>
     <div id="frame">
@@ -21,11 +21,22 @@
       <div id="stage"><div id="game"></div></div>
 
       <div id="coach" hidden></div>
+      <div id="quest" hidden><img src="/yolkiran-site/oyna/assets/icon_check.svg" alt="" /><span id="quest-text"></span><button id="quest-btn" class="btn buy iron" type="button"><img src="/yolkiran-site/oyna/assets/iron.svg" alt="" /><span id="quest-reward"></span></button></div>
       <nav id="skills" aria-label="Beceriler"></nav>
 
       <main id="panel">
         <section id="tab-grow" class="tab" data-tab="grow"></section>
         <section id="tab-forge" class="tab" data-tab="forge" hidden></section>
+        <section id="tab-ally" class="tab" data-tab="ally" hidden></section>
+        <section id="tab-shop" class="tab" data-tab="shop" hidden>
+          <b class="sub">REKLAM ÖDÜLLERİ</b>
+          <p id="ads-note" class="head"></p>
+          <div id="ads-track" class="quests"></div>
+          <div id="ads-list" class="quests"></div>
+          <p id="ads-reset" class="head"></p>
+          <b class="sub">GÜNLÜK</b>
+          <button id="btn-shop-daily" class="btn wide" type="button">Günlük ödüller ve görevler</button>
+        </section>
         <section id="tab-skill" class="tab" data-tab="skill" hidden></section>
         <section id="tab-path" class="tab" data-tab="path" hidden></section>
         <section id="tab-account" class="tab" data-tab="account" hidden>
@@ -76,12 +87,42 @@
 
       <nav id="tabs" aria-label="Bölümler">
         <button class="tabbtn on" data-tab="grow" type="button"><img src="/yolkiran-site/oyna/assets/icon_weapon.svg" alt="" /><span>Güçlen</span><i id="grow-dot" hidden></i></button>
-        <button class="tabbtn" data-tab="forge" type="button"><img src="/yolkiran-site/oyna/assets/hero_hammer.svg" alt="" /><span>Atölye</span><i id="forge-dot" hidden></i></button>
+        <button class="tabbtn" data-tab="forge" type="button"><img src="/yolkiran-site/oyna/assets/hero_hammer.svg" alt="" /><span>Ekipman</span><i id="forge-dot" hidden></i></button>
         <button class="tabbtn" data-tab="skill" type="button"><img src="/yolkiran-site/oyna/assets/skill_meteor.svg" alt="" /><span>Beceri</span><i id="skill-dot" hidden></i></button>
-        <button class="tabbtn" data-tab="path" type="button"><img src="/yolkiran-site/oyna/assets/icon_path.svg" alt="" /><span>Yol</span><i id="path-dot" hidden></i></button>
+        <button class="tabbtn" data-tab="ally" type="button"><img src="/yolkiran-site/oyna/assets/pet.svg" alt="" /><span>Yoldaş</span><i id="ally-dot" hidden></i></button>
+        <button class="tabbtn" data-tab="path" type="button"><img src="/yolkiran-site/oyna/assets/icon_path.svg" alt="" /><span>Macera</span><i id="path-dot" hidden></i></button>
+        <button class="tabbtn" data-tab="shop" type="button"><img src="/yolkiran-site/oyna/assets/icon_gift.svg" alt="" /><span>Mağaza</span><i id="shop-dot" hidden></i></button>
         <button class="tabbtn" data-tab="account" type="button"><img src="/yolkiran-site/oyna/assets/icon_account.svg" alt="" /><span>Hesap</span><i id="acc-dot" hidden></i></button>
       </nav>
 
+      <section id="welcome" class="overlay" hidden>
+        <div>
+          <h1>BONK<br />ROAD</h1>
+          <p class="tag">Yolu aç. Durmadan güçlen.</p>
+        </div>
+        <div class="scene">
+          <img class="hero" src="/yolkiran-site/oyna/assets/hero_scene.svg" alt="" />
+          <img class="foe a" src="/yolkiran-site/oyna/assets/foe_scene_0.svg" alt="" />
+          <img class="foe b" src="/yolkiran-site/oyna/assets/foe_scene_1.svg" alt="" />
+          <img class="foe c" src="/yolkiran-site/oyna/assets/foe_scene_2.svg" alt="" />
+        </div>
+        <div class="entry">
+          <button id="w-apple" class="btn social apple wide" type="button" hidden><img src="/yolkiran-site/oyna/assets/logo_apple.svg" alt="" />Apple ile giriş yap</button>
+          <button id="w-google" class="btn social google wide" type="button" hidden><img src="/yolkiran-site/oyna/assets/logo_google.svg" alt="" />Google ile giriş yap</button>
+          <button id="w-guest" class="btn buy wide" type="button">Misafir olarak başla</button>
+          <p id="w-error" class="error" role="alert"></p>
+          <p class="note">İlerlemen her durumda kaydedilir. Misafir başlarsan hesabını sonra Hesap sekmesinden bağlayabilirsin.</p>
+        </div>
+      </section>
+      <section id="story" class="overlay" hidden>
+        <div class="scene" id="story-scene"></div>
+        <p id="story-text"></p>
+        <div id="story-dots"></div>
+        <div class="row2">
+          <button id="story-skip" class="btn" type="button">Geç</button>
+          <button id="story-next" class="btn buy" type="button">Devam</button>
+        </div>
+      </section>
       <section id="boot" class="overlay">
         <h1>BONK ROAD</h1>
         <p id="boot-text">Yükleniyor…</p>
@@ -93,20 +134,11 @@
           <h2>YOKKEN KAZANDIN</h2>
           <ul id="off-lines" class="lines"></ul>
           <p id="off-note" class="note"></p>
-          <button id="btn-offline-ok" class="btn buy wide" type="button">Devam</button>
+          <button id="btn-offline-ad" class="btn buy wide" type="button" hidden></button>
+          <button id="btn-offline-ok" class="btn wide" type="button">Devam</button>
         </div>
       </section>
 
-      <section id="ads" class="overlay dim" hidden>
-        <div class="card pop">
-          <h2>REKLAM ÖDÜLLERİ</h2>
-          <p id="ads-note" class="note"></p>
-          <div id="ads-track" class="quests"></div>
-          <div id="ads-list" class="quests"></div>
-          <p id="ads-reset" class="note"></p>
-          <button id="btn-ads-close" class="btn wide" type="button">Kapat</button>
-        </div>
-      </section>
       <section id="daily" class="overlay dim" hidden>
         <div class="card pop">
           <h2>GÜNLÜK</h2>
