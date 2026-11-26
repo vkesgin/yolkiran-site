@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
     <meta name="theme-color" content="#698C50" />
     <title>Bonk Road</title>
-    <script type="module" crossorigin src="/yolkiran-site/oyna/assets/index-DQrm6r5F.js"></script>
-    <link rel="stylesheet" crossorigin href="/yolkiran-site/oyna/assets/index-DJBAugD8.css">
+    <script type="module" crossorigin src="/yolkiran-site/oyna/assets/index-BiYYJzfY.js"></script>
+    <link rel="stylesheet" crossorigin href="/yolkiran-site/oyna/assets/index-CWythcaa.css">
   </head>
   <body>
     <div id="frame">
@@ -50,6 +50,7 @@
           </form>
           <div class="card">
             <b>Sıralama</b>
+            <div class="seg" id="board-seg"><button type="button" data-board="all" class="on">Tüm zamanlar</button><button type="button" data-board="week">Bu hafta</button></div>
             <p id="board-note" class="note"></p>
             <ol id="board-list" class="board"></ol>
             <form id="nick-form" class="nick">
@@ -72,7 +73,7 @@
       <nav id="tabs" aria-label="Bölümler">
         <button class="tabbtn on" data-tab="grow" type="button"><img src="/yolkiran-site/oyna/assets/icon_weapon.svg" alt="" /><span>Güçlen</span></button>
         <button class="tabbtn" data-tab="forge" type="button"><img src="/yolkiran-site/oyna/assets/hero_hammer.svg" alt="" /><span>Atölye</span></button>
-        <button class="tabbtn" data-tab="skill" type="button"><img src="/yolkiran-site/oyna/assets/skill_meteor.svg" alt="" /><span>Beceri</span></button>
+        <button class="tabbtn" data-tab="skill" type="button"><img src="/yolkiran-site/oyna/assets/skill_meteor.svg" alt="" /><span>Beceri</span><i id="skill-dot" hidden></i></button>
         <button class="tabbtn" data-tab="path" type="button"><img src="/yolkiran-site/oyna/assets/icon_path.svg" alt="" /><span>Yol</span><i id="path-dot" hidden></i></button>
         <button class="tabbtn" data-tab="account" type="button"><img src="/yolkiran-site/oyna/assets/icon_account.svg" alt="" /><span>Hesap</span><i id="acc-dot" hidden></i></button>
       </nav>
@@ -95,6 +96,7 @@
       <section id="daily" class="overlay dim" hidden>
         <div class="card pop">
           <h2>GÜNLÜK</h2>
+          <p id="daily-event" class="event" hidden></p>
           <p id="daily-streak" class="note"></p>
           <div id="daily-days" class="days"></div>
           <button id="btn-daily-claim" class="btn buy iron wide" type="button"></button>
