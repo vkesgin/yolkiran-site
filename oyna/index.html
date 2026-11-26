@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no" />
     <meta name="theme-color" content="#698C50" />
     <title>Bonk Road</title>
-    <script type="module" crossorigin src="/yolkiran-site/oyna/assets/index-CfPchJIh.js"></script>
-    <link rel="stylesheet" crossorigin href="/yolkiran-site/oyna/assets/index-DMZNVa1q.css">
+    <script type="module" crossorigin src="/yolkiran-site/oyna/assets/index-BKcYoYkh.js"></script>
+    <link rel="stylesheet" crossorigin href="/yolkiran-site/oyna/assets/index-C7Khdu52.css">
   </head>
   <body>
     <div id="frame">
@@ -14,6 +14,7 @@
         <span id="chip-copper" class="chip" title="Bakır"><img src="/yolkiran-site/oyna/assets/coin.svg" alt="Bakır" /><span class="stack"><b id="hud-copper">0</b><small id="hud-rate"></small></span></span>
         <span id="chip-iron" class="chip" title="Demir"><img src="/yolkiran-site/oyna/assets/iron.svg" alt="Demir" /><b id="hud-iron">0</b></span>
         <span id="sync" class="sync">…</span>
+        <button id="btn-ads" class="gift ads" type="button" aria-label="Reklam ödülleri" hidden><img src="/yolkiran-site/oyna/assets/icon_ad.svg" alt="" /><i id="ads-dot" hidden></i><span id="boost-left"></span></button>
         <button id="btn-daily" class="gift" type="button" aria-label="Günlük ödüller"><img src="/yolkiran-site/oyna/assets/icon_gift.svg" alt="" /><i id="daily-dot" hidden></i></button>
       </header>
 
@@ -66,6 +67,7 @@
           <button id="btn-sound" class="btn wide" type="button">Ses efektleri: Açık</button>
           <button id="btn-music" class="btn wide" type="button">Müzik: Açık</button>
           <button id="btn-haptics" class="btn wide" type="button" hidden></button>
+          <button id="btn-fx" class="btn wide" type="button"></button>
           <button id="btn-notify" class="btn wide" type="button" hidden></button>
           <a id="link-privacy" class="link" href="https://vkesgin.github.io/yolkiran-site/gizlilik.html" target="_blank" rel="noopener">Gizlilik politikası</a>
           <button id="btn-delete" class="btn wide danger" type="button">Hesabımı ve verilerimi sil</button>
@@ -95,6 +97,16 @@
         </div>
       </section>
 
+      <section id="ads" class="overlay dim" hidden>
+        <div class="card pop">
+          <h2>REKLAM ÖDÜLLERİ</h2>
+          <p id="ads-note" class="note"></p>
+          <div id="ads-track" class="quests"></div>
+          <div id="ads-list" class="quests"></div>
+          <p id="ads-reset" class="note"></p>
+          <button id="btn-ads-close" class="btn wide" type="button">Kapat</button>
+        </div>
+      </section>
       <section id="daily" class="overlay dim" hidden>
         <div class="card pop">
           <h2>GÜNLÜK</h2>
